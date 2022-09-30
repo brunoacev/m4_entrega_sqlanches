@@ -5,11 +5,10 @@
 
 SELECT
 p.id, p.status, p.cliente_id, pr.id, pr.nome, pr.tipo,
-pr."preço", pr.pts_de_lealdade pontos_de_lealdade_do_produto 
+pr."preço", pr.pts_de_lealdade
 FROM pedidos p
 JOIN produtos_pedidos pp ON p.id = pp.pedido_id
 JOIN produtos pr ON pr.id = pp.produto_id;
-
 -- 2)
 
 SELECT 
